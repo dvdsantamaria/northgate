@@ -343,3 +343,32 @@
 @media(max-width:900px){
   .footer-grid{grid-template-columns:1fr}
 }
+
+
+/* CTA with arrow */
+.btn.btn-cta{
+  display:inline-flex;            /* put text and icon inline */
+  align-items:center;
+  gap:.6rem;                      /* space between text and icon */
+}
+
+/* arrow look and micro-motion */
+.icon-arrow{
+  width:18px;height:18px;
+  transition:transform .18s ease;
+}
+
+/* subtle nudge loop (respects reduced motion) */
+@media (prefers-reduced-motion: no-preference){
+  .icon-arrow{ animation:arrow-nudge 2.2s ease-in-out infinite }
+  @keyframes arrow-nudge{
+    0%,100%{ transform:translateX(0) }
+    50%{ transform:translateX(4px) }
+  }
+}
+
+/* stronger cue on hover or tap */
+.btn.btn-cta:hover .icon-arrow,
+.btn.btn-cta:focus-visible .icon-arrow{
+  transform:translateX(6px);
+}
