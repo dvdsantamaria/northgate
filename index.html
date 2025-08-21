@@ -8,53 +8,176 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Prata&display=swap" rel="stylesheet" />
 <link href="styles.css" rel="stylesheet" />
-
-
 </head>
+
 <body>
   <header>
     <div class="container">
       <a class="insta" href="https://www.instagram.com/northgatebuildinggroup" target="_blank" rel="noopener">
         @northgatebuildinggroup
       </a>
-  
+
       <div class="logo">
         <img src="logo.webp" alt="Northgate">
       </div>
-  
+
       <span class="phone">0433 810 935</span>
     </div>
   </header>
-<main>
-  <div class="half img-side"><img src="northgate.jpg" alt="Builder meeting client" loading="lazy" /></div>
-  <section class="half content-side">
-    <div class="upper-block">
-      <span class="badge">Licensed Builder (Class 1 and 2)</span>
-      <h1>Know Your<br><span class="highlight">True Move In Date</span></h1>
-      <div class="usage"><span class="icon"></span>125+ homeowners used this tool last month</div>
-      <img src="northgate.jpg" alt="Builder meeting client" class="mobile-img" loading="lazy" />
+
+  <main>
+    <div class="half img-side">
+      <img src="northgate.jpg" alt="Builder meeting client" loading="lazy" />
     </div>
-    <div class="lower-block">
-      <h2>Real Build Timeline Checker™</h2>
-      <p class="subtitle">Get your professional assessment in under 2 minutes.</p>
-      <div class="features">
-        <div class="card"><strong>Instant Results</strong><p>No waiting, no follow up calls required.</p></div>
-        <div class="card"><strong>Proven Accurate</strong><p>Based on 100+ completed projects.</p></div>
-        <div class="card"><strong>Professional Grade</strong><p>Industry methodology, not guesswork.</p></div>
+
+    <section class="half content-side">
+      <div class="upper-block">
+        <span class="badge">Licensed Builder (Class 1 and 2)</span>
+        <h1>Know Your<br><span class="highlight">True Move In Date</span></h1>
+        <div class="usage"><span class="icon"></span>125+ homeowners used this tool last month</div>
+        <img src="northgate.jpg" alt="Builder meeting client" class="mobile-img" loading="lazy" />
       </div>
-      <div class="timeline-factors">
-        <ul class="factors-list">
-          <li>Project type and complexity</li>
-          <li>Site access challenges</li>
-          <li>Builder engagement status</li>
-          <li>Current approval stage</li>
-          <li>Council and heritage constraints</li>
-          <li>Decision complexity factors</li>
-        </ul>
+
+      <div class="lower-block">
+        <h2>Real Build Timeline Checker™</h2>
+        <p class="subtitle">Get your professional assessment in under 2 minutes.</p>
+
+        <div class="features">
+          <div class="card"><strong>Instant Results</strong><p>No waiting, no follow up calls required.</p></div>
+          <div class="card"><strong>Proven Accurate</strong><p>Based on 100+ completed projects.</p></div>
+          <div class="card"><strong>Professional Grade</strong><p>Industry methodology, not guesswork.</p></div>
+        </div>
+
+        <div class="timeline-factors">
+          <ul class="factors-list">
+            <li>Project type and complexity</li>
+            <li>Site access challenges</li>
+            <li>Builder engagement status</li>
+            <li>Current approval stage</li>
+            <li>Council and heritage constraints</li>
+            <li>Decision complexity factors</li>
+          </ul>
+        </div>
       </div>
+    </section>
+  </main>
+
+  <!-- Section 1: full screen video hero -->
+  <section class="hero-video" aria-label="Intro video">
+    <!-- video must live in the root as video.mp4 -->
+    <video class="bg-video" src="video.mp4" autoplay muted loop playsinline></video>
+    <div class="hero-overlay">
+      <h2>See How We Build</h2>
+      <p>Short showcase that reflects our process and standards.</p>
     </div>
   </section>
-</main>
-<a href="https://preview--build-date-dreamer-15.lovable.app/" class="btn">Get My Build Timeline</a>
+
+  <!-- Section 2: FAQs -->
+  <section class="faqs" id="faqs">
+    <div class="wrap">
+      <h2 class="section-title">FAQs</h2>
+
+      <!-- using details for native a11y -->
+      <details class="faq-item">
+        <summary>Is the guide useful if I already have plans or an architect?</summary>
+        <div class="answer">
+          Yes. The checker validates timeline risk from council, services, access, procurement and builder readiness. It often highlights delays not covered in drawings.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do I need to be building right now to download it?</summary>
+        <div class="answer">
+          No. It is designed for planning. You can use it while comparing sites or before lodging a DA to understand likely windows.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How accurate are the timelines?</summary>
+        <div class="answer">
+          Estimates come from live pipeline data and over 100 finished projects in Sydney. We include buffers for approvals and lead times so results are realistic.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How much does it cost to build a custom home?</summary>
+        <div class="answer">
+          Cost varies by site, spec and approvals. After you run the checker you can request a budget range and inclusions sheet. No obligation.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can you help with the design process too?</summary>
+        <div class="answer">
+          Yes. We coordinate design with trusted architects and engineers or we work with your team. The goal is clear decisions, fewer variations and a clean start.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Section 3: Awards highlight -->
+  <section class="awards" id="awards">
+    <div class="wrap">
+      <article class="award">
+        <div class="award-left">
+          <h3 class="award-title">Barker College Sports and Learning</h3>
+          <p class="award-text">
+            State of the art three storey indoor sports complex with classrooms, amenities and bridge link. Role: Site Foreman for Prime Constructions. Delivered 2021. Value 40M.
+          </p>
+        </div>
+        <div class="award-right">
+          <span class="tag">Commercial</span>
+          <!-- replace src with your actual badge file -->
+          <img class="badge-img" src="award-2020.png" alt="Excellence in Construction Awards 2020 Winner" loading="lazy">
+        </div>
+      </article>
+
+      <article class="award">
+        <div class="award-left">
+          <h3 class="award-title">Northern Beaches Business Park</h3>
+          <p class="award-text">
+            Five classes, 11 warehouses and offices with heritage works, pool and golf fitout. Role: Site Manager for Richard Crookes Construction. Completed 2023. Value circa 52M.
+          </p>
+        </div>
+        <div class="award-right">
+          <span class="tag">Commercial</span>
+          <img class="badge-img" src="award-2024.png" alt="Excellence in Construction Awards 2024 Winner" loading="lazy">
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Section 4: See our projects -->
+  <section class="cta-projects" aria-label="See our projects">
+    <!-- set a wide image in the root, name it projects.jpg or change in CSS -->
+    <div class="cta-content">
+      <h2>See Our Projects</h2>
+      <a href="/projects" class="btn-light">See Projects</a>
+    </div>
+  </section>
+
+  <!-- Section 5: Footer -->
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <img src="logo.webp" alt="Northgate" class="footer-logo">
+        <p>Quality residential and commercial projects in Sydney.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="mailto:info@northgatebuilding.com.au">info@northgatebuilding.com.au</a></p>
+        <p><a href="tel:+61433810935">0433 810 935</a></p>
+        <p><a href="https://www.instagram.com/northgatebuildinggroup" target="_blank" rel="noopener">@northgatebuildinggroup</a></p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p>Neutral Bay, Sydney</p>
+      </div>
+    </div>
+    <div class="wrap footer-copy">© Northgate Building Group</div>
+  </footer>
+
+  <!-- fixed CTA kept as-is -->
+  <a href="https://preview--build-date-dreamer-15.lovable.app/" class="btn">Get My Build Timeline</a>
 </body>
 </html>
