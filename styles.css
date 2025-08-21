@@ -263,10 +263,19 @@
 
 /* Sound button */
 .audio-toggle{
-  margin-top:1rem;
-  padding:.7rem 1.1rem; border:0; border-radius:999px;
-  background:#fff; color:#000; font-weight:600; cursor:pointer;
-  box-shadow:0 0 0 1px rgba(0,0,0,.1)
+  position:absolute;          /* anchor inside .hero-overlay */
+  bottom:16px;
+  left:50%;
+  transform:translateX(-50%);                /* usa left:50% + transform si lo querés centrado */
+  margin:0;
+  padding:.7rem 1.1rem;
+  border:0;
+  border-radius:999px;
+  background:#fff;
+  color:#000;
+  font-weight:600;
+  cursor:pointer;
+  box-shadow:0 0 0 1px rgba(0,0,0,.1);
 }
 /* ---------- FAQs ---------- */
 .faqs{background:var(--surface);padding:4rem 0}
@@ -313,7 +322,7 @@
 /* ---------- See our projects CTA ---------- */
 .cta-projects{
   position:relative;min-height:48vh;display:flex;align-items:center;justify-content:center;
-  background:url('projects.jpg') center/cover no-repeat;
+  background:url('project.jpg') center/cover no-repeat;
 }
 .cta-projects::before{
   content:"";position:absolute;inset:0;background:rgba(255,255,255,.35)
