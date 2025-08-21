@@ -32,14 +32,16 @@
   }
   
   h1{
-    font-size:clamp(2rem,5vw,3.2rem);
+    font-size:clamp(2.4rem,6vw,4rem);
     max-width:22ch;
-    letter-spacing:-.3px;
+    padding: 2rem 0rem 1rem 0rem;
+    letter-spacing:-.4px;
+    line-height:1.1;
   }
   
   h2{
     font-size:clamp(1.2rem,2.3vw,2rem);
-    text-align:center;
+    text-align: left;
   }
   
   header{
@@ -65,6 +67,8 @@
     header .logo{margin-right:auto}
   }
   
+  section.awards, section.faqs { padding:6rem 0rem ;}
+
   main{display:flex;min-height:calc(100vh - 90px)}
   
   .half{flex:1 1 50%}            /* semicolon added */
@@ -85,7 +89,7 @@
     background:var(--surface);
   }
   
-  .upper-block{padding:3rem 2rem 2.5rem}
+  .upper-block{padding:3rem 4rem 2.5rem}
   
   .badge{font-size:.8rem;margin-bottom:1rem}
   
@@ -100,7 +104,7 @@
     display:inline-flex;
     align-items:center;
     gap:.55rem;
-    background:#c9ecfa;
+    background:#e9ecef;     /* was #c9ecfa */
     border-radius:28px;
     padding:.55rem .95rem;
     font-size:.85rem;
@@ -126,8 +130,8 @@
   
   .lower-block{
     flex:1;
-    background:var(--blue);
-    padding:3rem 2rem 8rem;
+    background:var(--surface);
+    padding:1rem 4rem 4rem;
     display:flex;
     flex-direction:column;
   }
@@ -136,6 +140,8 @@
     text-align:center;
     margin:0 0 1.5rem;
     font-size:.95rem;
+    text-align: left;
+
   }
   
   .features{
@@ -147,7 +153,7 @@
   
   .card{
     background:var(--surface);
-    padding:1.25rem;
+    padding:  1.25rem;
     border-radius:6px;
     text-align:center;
     box-shadow:0 0 0 1px rgba(0,0,0,.08);
@@ -159,6 +165,8 @@
     background:var(--surface);
     padding:1.25rem;
     border-radius:6px;
+    box-shadow:0 0 0 1px rgba(0,0,0,.08);
+
     margin-bottom:1.5rem;
     font-size:.9rem;
   }
@@ -180,17 +188,19 @@
   }
   
   .btn{
-    background:var(--ink);
-    color:var(--gold);
-    padding:1rem 1.75rem;
+    background:var(--gold);
+    color:var(--ink);
+    padding:1rem 1.6rem;        /* more padding */
+    font-size:1.5rem;          
     border-radius:36px;
     font-weight:600;
     text-decoration:none;
     position:fixed;
     left:50%;
     transform:translateX(-50%);
-    bottom:1.25rem;
-    z-index:100;
+    bottom:64px;  
+        z-index:100;
+        text-transform: uppercase;
     width:max-content;
   }
   
@@ -297,27 +307,14 @@
 }
 .faq-item[open] > summary::after{transform:rotate(-180deg)}
 .faq-item .answer{padding:.75rem 0 1rem;font-size:1rem;max-width:80ch}
-
-/* ---------- Awards ---------- */
-.awards{background:#f0f2f6;padding:4rem 0}
-.award{
-  display:grid;grid-template-columns:1fr auto;gap:2rem;
-  background:#fff;border-radius:8px;padding:1.5rem 1.5rem;
-  box-shadow:0 0 0 1px rgba(0,0,0,.07);
-  margin:0 0 1rem;
+/* ---------- Awards (simple) ---------- */
+.awards{background:#f0f2f6;padding:3rem 0}
+.award-badges{
+  display:flex;justify-content:center;align-items:center;gap:2rem;
+  flex-wrap:wrap;margin-top:1rem
 }
-.award-title{font-family:Prata,Georgia,serif;font-size:clamp(1.6rem,2.6vw,2.2rem);margin:.2rem 0 .5rem;color:#1455a3}
-.award-text{margin:0;line-height:1.6}
-.award-right{display:flex;align-items:center;gap:1rem}
-.tag{
-  border:2px solid var(--ink);padding:.4rem .9rem;border-radius:6px;
-  font-weight:600
-}
-.badge-img{width:120px;height:auto}
-@media(max-width:800px){
-  .award{grid-template-columns:1fr}
-  .award-right{justify-content:flex-start}
-}
+.award-badges img{width:150px;height:auto}
+@media(max-width:480px){.award-badges img{width:120px}}
 
 /* ---------- See our projects CTA ---------- */
 .cta-projects{
