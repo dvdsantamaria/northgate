@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northgate – Build Timeline Checker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Prata&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f6f8;--ink:#0b0b0c;--surface:#ffffff;--blue-soft:#cfe0f1;--gold:#ffd246;--radius:16px;--shadow:0 6px 16px rgba(0,0,0,.06);--line:#e2e6ee}
+*,*::before,*::after{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3{margin:0 0 .5rem;font-family:Prata,Georgia,serif;line-height:1.12;color:var(--ink)}
+h1{font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.3px;max-width:22ch}
+h2{font-size:clamp(1.2rem,2.3vw,2rem);text-align:center}
+p{margin:0 0 1rem;color:var(--ink)}
+header{background:var(--ink);height:90px;display:flex;align-items:center;color:var(--surface);padding:0 1.25rem}
+header .logo{flex:1;display:flex;justify-content:center}
+header .insta,header .phone{font-size:.9rem;opacity:.85}
+header .phone{font-weight:600;font-size:1rem}
+header img{width:160px;max-width:316px;height:auto}
+main.hero{display:flex;min-height:calc(100vh - 90px)}
+.half{flex:1 1 50%}
+.img-side{position:relative}
+.img-side img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.content-side{display:flex;flex-direction:column;background:var(--surface)}
+.upper-block{padding:3rem 2rem 2.5rem 2rem}
+.badge{font-size:.8rem;margin-bottom:1rem;letter-spacing:.03em}
+.highlight{background:var(--gold);padding:0 .32rem;border-radius:4px;box-decoration-break:clone}
+.usage{display:inline-flex;align-items:center;gap:.55rem;background:#c9ecfa;border-radius:28px;padding:.55rem .95rem;font-size:.85rem;font-weight:500;margin-top:1.25rem}
+.usage .icon{display:inline-block;width:16px;height:16px;background:url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%236a7c93" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Ccircle cx="12" cy="12" r="10"/%3E%3Cline x1="12" y1="16" x2="12" y2="12"/%3E%3Cline x1="12" y1="8" x2="12.01" y2="8"/%3E%3C/svg%3E') no-repeat center/contain}
+.lower-block{flex:1 1 auto;background:var(--blue-soft);padding:3rem 2rem;display:flex;flex-direction:column}
+.subtitle{text-align:center;font-size:.95rem;margin-bottom:1.5rem}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:1.5rem}
+.card{background:var(--surface);padding:1.25rem;border-radius:6px;text-align:center;font-size:.9rem;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+.timeline-factors{display:grid;grid-template-columns:1fr 1fr;gap:1rem;background:var(--surface);padding:1.25rem;border-radius:6px;margin-bottom:1.5rem;font-size:.9rem}
+.timeline-factors ul{margin:0;padding:0;list-style:none}
+.timeline-factors li{display:flex;gap:.5rem;margin:0 0 .65rem}
+.timeline-factors li::before{content:"✓";color:var(--gold);font-weight:600}
+.btn{display:inline-block;background:var(--ink);color:var(--gold);padding:1rem 1.75rem;border-radius:36px;font-size:1rem;font-weight:600;text-decoration:none;text-align:center;width:max-content;margin-inline:auto;margin-top:auto;position:sticky;bottom:1.25rem}
+@media(max-width:1100px){.features{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){main.hero{flex-direction:column}.img-side{height:35vh}.upper-block{padding:2.2rem 1.5rem}.lower-block{padding:2rem 1.5rem}.features{grid-template-columns:1fr}.timeline-factors{grid-template-columns:1fr}.btn{position:static;margin-top:2rem}}
+</style>
+</head>
+<body>
+<header>
+  <span class="insta">@northgatebuildinggroup</span>
+  <div class="logo"><img src="logo.webp" alt="Northgate Logo"></div>
+  <span class="phone">0433 810 935</span>
+</header>
+<main class="hero">
+  <div class="half img-side"><img src="northgate.jpg" alt="Builder meeting client"></div>
+  <section class="half content-side">
+    <div class="upper-block">
+      <span class="badge">Licensed Builder (Class 1 and 2)</span>
+      <h1>Know Your <span class="highlight">True <br>Move In Date</span></h1>
+      <div class="usage"><span class="icon"></span>125+ homeowners used this tool last month</div>
+    </div>
+    <div class="lower-block">
+      <h2>Real Build Timeline Checker™</h2>
+      <p class="subtitle">Get your professional assessment in under 2 minutes.</p>
+      <div class="features">
+        <div class="card"><strong>Instant Results</strong><p>No waiting, no follow up calls required.</p></div>
+        <div class="card"><strong>Proven Accurate</strong><p>Based on 100+ completed projects.</p></div>
+        <div class="card"><strong>Professional Grade</strong><p>Industry methodology, not guesswork.</p></div>
+      </div>
+      <div class="timeline-factors">
+        <ul><li>Project type and complexity</li><li>Site access challenges</li><li>Builder engagement status</li></ul>
+        <ul><li>Current approval stage</li><li>Council and heritage constraints</li><li>Decision complexity factors</li></ul>
+      </div>
+      <a href="#get-timeline" class="btn">Get My Build Timeline</a>
+    </div>
+  </section>
+</main>
+</body>
+</html>
