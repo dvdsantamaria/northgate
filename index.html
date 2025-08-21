@@ -33,7 +33,7 @@
     <section class="half content-side">
       <div class="upper-block">
         <span class="badge">Licensed Builder (Class 1 and 2)</span>
-        <h1>Know Your<br><span class="highlight">True Move In Date</span></h1>
+        <h1>Know Your<span class="highlight">True <br> Move In Date</span></h1>
         <div class="usage"><span class="icon"></span>125+ homeowners used this tool last month</div>
         <img src="northgate.jpg" alt="Builder meeting client" class="mobile-img" loading="lazy" />
       </div>
@@ -64,11 +64,17 @@
 
   <!-- Section 1: full screen video hero -->
   <section class="hero-video" aria-label="Intro video">
-    <!-- video must live in the root as video.mp4 -->
-    <video class="bg-video" src="video.mp4" autoplay muted loop playsinline></video>
-    <div class="hero-overlay">
-      <h2>See How We Build</h2>
-      <p>Short showcase that reflects our process and standards.</p>
+    <div class="video-frame">
+      <!-- Autoplay muted by default. User can unmute. -->
+      <video id="heroVideo" class="bg-video"
+             src="video.mp4" autoplay muted loop playsinline preload="metadata"></video>
+  
+      <div class="hero-overlay">
+        <h2>See How We Build</h2>
+        <p>Short showcase that reflects our process and standards.</p>
+        <!-- Sound toggle -->
+        <button class="audio-toggle" type="button" aria-pressed="false" aria-label="Unmute video">Unmute</button>
+      </div>
     </div>
   </section>
 
@@ -179,5 +185,25 @@
 
   <!-- fixed CTA kept as-is -->
   <a href="https://preview--build-date-dreamer-15.lovable.app/" class="btn">Get My Build Timeline</a>
+
+  <script>
+    // Toggle sound keeping autoplay behavior
+    const v = document.getElementById('heroVideo');
+    const b = document.querySelector('.audio-toggle');
+  
+    // Update button label/state
+    function syncBtn(){
+      const on = !v.muted;
+      b.textContent = on ? 'Mute' : 'Unmute';
+      b.setAttribute('aria-pressed', String(on));
+    }
+    syncBtn();
+  
+    b.addEventListener('click', () => {
+      v.muted = !v.muted;       // flip mute
+      v.play().catch(() => {}); // ensure playback resumes on iOS
+      syncBtn();
+    });
+  </script>
 </body>
 </html>
