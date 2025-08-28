@@ -33,7 +33,6 @@
     <section class="half content-side">
       <div class="upper-block">
         <span class="badge">Licensed Builder (Class 1 and 2)</span>
-        <!-- Strong headline that points to the CTA -->
         <h1>Check Your <span class="highlight">True Move-In Date</span></h1>
         <div class="usage"><span class="icon"></span>125+ homeowners used this tool last month</div>
         <img src="northgate.jpg" alt="Builder meeting client" class="mobile-img" loading="lazy" />
@@ -41,7 +40,6 @@
       
       <div class="lower-block">
         <h2>Real Build Timeline Checker™</h2>
-        <!-- <p class="subtitle">Professional check in 2 minutes.</p> -->
       
         <div class="features">
           <div class="card"><strong>Instant</strong><p>Results on screen.</p></div>
@@ -65,7 +63,6 @@
 
   <section class="hero-video" aria-label="Intro video">
     <div class="video-frame">
-      <!-- Autoplay muted by default. User can unmute. -->
       <video id="heroVideo" class="bg-video"
              src="video.mp4" autoplay muted loop playsinline preload="metadata"></video>
   
@@ -76,12 +73,10 @@
     </div>
   </section>
 
-  <!-- Section 2: FAQs -->
   <section class="faqs" id="faqs">
     <div class="wrap">
       <h2 class="section-title">FAQs</h2>
 
-      <!-- using details for native a11y -->
       <details class="faq-item">
         <summary>Is the guide useful if I already have plans or an architect?</summary>
         <div class="answer">
@@ -119,7 +114,6 @@
     </div>
   </section>
 
-  <!-- Section 3: Awards highlight -->
   <section class="awards" id="awards">
     <div class="wrap">
       <h2 class="section-title">Multi award-winning builder</h2>
@@ -130,16 +124,13 @@
     </div>
   </section>
 
-  <!-- Section 4: See our projects -->
   <section class="cta-projects" aria-label="See our projects">
-    <!-- set a wide image in the root, name it projects.jpg or change in CSS -->
     <div class="cta-content">
       <h2>See Our Projects</h2>
       <a href="https://www.northgatebuilding.com.au/projects" class="btn-light">See Projects</a>
     </div>
   </section>
 
-  <!-- Section 5: Footer -->
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div>
@@ -160,16 +151,13 @@
     <div class="wrap footer-copy">© Northgate Building Group</div>
   </footer>
 
-  <!-- fixed CTA kept as-is -->
   <a href="https://preview--build-date-dreamer-15.lovable.app/" class="btn btn-cta">
     <span>Get My Build Timeline</span>
-    <!-- simple arrow icon -->
     <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true">
       <path d="M5 12h12M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   </a>
   <script>
-    // Toggle sound keeping autoplay behavior
     const v = document.getElementById('heroVideo');
     const b = document.querySelector('.audio-toggle');
   
@@ -182,8 +170,8 @@
     syncBtn();
   
     b.addEventListener('click', () => {
-      v.muted = !v.muted;       // flip mute
-      v.play().catch(() => {}); // ensure playback resumes on iOS
+      v.muted = !v.muted;       
+      v.play().catch(() => {}); 
       syncBtn();
     });
   </script>
